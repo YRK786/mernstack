@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MERN Stack Portfolio • Mohd Yaseen Rafi Khan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #050505;
+            background-image: 
+                radial-gradient(circle at top right, rgba(212, 175, 55, 0.08), transparent 45%),
+                radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.05), transparent 45%);
+            color: #ffffff;
+            font-family: 'Lato', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 80px 20px 40px;
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #ffffff, #d4af37, #d4af37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .header .name {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #ffffff;
+            margin-top: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header .name::before,
+        .header .name::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 1px;
+            background: #d4af37;
+        }
+
+        .header .name::before { left: -60px; }
+        .header .name::after { right: -60px; }
+
+        .overview {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+            color: #ffffff;
+            font-weight: 300;
+            font-size: 1.05rem;
+        }
+
+        .overview strong {
+            color: #d4af37;
+            font-weight: 400;
+        }
+
+        .assignments {
+            position: relative;
+            flex: 1; 
+        }
+
+        .section-separator {
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+            color: #d4af37;
+            font-size: 1.5rem;
+            font-style: italic;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(212, 175, 55, 0.15); 
+            border-radius: 4px;
+            padding: 25px 35px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+            position: relative;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .card-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #d4af37;
+            font-style: italic;
+            min-width: 40px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+        }
+
+        .status {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            height: 40px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .status.view {
+            color: #050505;
+            background: #d4af37;
+            border: 1px solid #d4af37;
+        }
+
+        .status.view:hover {
+            background: transparent;
+            color: #d4af37;
+        }
+
+        .status.progress {
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: transparent;
+        }
+        
+        .status.progress:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+        }
+
+        .status.pending {
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: transparent;
+            pointer-events: none;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: auto;
+            padding-top: 40px;
+            color: #ffffff;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.5rem; }
+            .container { padding: 40px 20px; }
+            
+            .card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .card-left {
+                width: 100%;
+            }
+
+            .status {
+                width: 100%;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>MERN Stack Application</h1>
+            <div class="name">Mohd Yaseen Rafi Khan</div>
+        </header>
+
+        <section class="overview">
+            <p>
+                A curated collection of full-stack web development projects specializing in the <strong>MERN</strong> stack 
+                (MongoDB, Express.js, React.js, Node.js). This portfolio showcases the progression from foundational frontend architecture to complex backend integration.
+            </p>
+        </section>
+
+        <section class="assignments">
+            <div class="section-separator">Assignments &amp; Projects</div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">01</span>
+                    <span class="card-title">HTML Structure • Laundry Wallah</span>
+                </div>
+                <a href="/assignment-01/" class="status view" target="_blank">View Project</a>
+            </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">02</span>
+                    <span class="card-title">CSS Design • Hero Section</span>
+                </div>
+                <a href="/assignment-02/" class="status view" target="_blank">View Project</a>
+            </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">03</span>
+                    <span class="card-title">JavaScript Logic • DOM Interaction</span>
+                </div>
+                <a href="/assignment-03/" class="status view" target="_blank">View Project</a>
+            </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">04</span>
+                    <span class="card-title">Advanced Frontend • Killer Website</span>
+                </div>
+                <a href="/assignment-04/" class="status view" target="_blank">View Project</a>
+            </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">05</span>
+                    <span class="card-title">React Application • Architecture</span>
+                </div>
+                <span class="status pending">Pending</span>
+            </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">06</span>
+                    <span class="card-title">NodeJS • API Development</span>
+                </div>
+                <span class="status pending">Pending</span>
+            </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">07</span>
+                    <span class="card-title">ExpressJS • RESTful Services</span>
+                </div>
+                <span class="status pending">Pending</span>
+            </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">08</span>
+                    <span class="card-title">MongoDB • Database Integration</span>
+                </div>
+                <span class="status pending">Pending</span>
+            </div>
+
+            <div class="card">
+                <div class="card-left">
+                    <span class="card-number">09</span>
+                    <span class="card-title">MERN Stack • Final Capstone</span>
+                </div>
+                <span class="status pending">Pending</span>
+            </div>
+
+        </section>
+
+        <footer>
+            Assignments & Projects Dashboard • 2026
+        </footer>
+
+    </div>
+
+</body>
+</html>

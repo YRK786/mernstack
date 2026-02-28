@@ -1,0 +1,1352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.navbar {
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+}
+
+.user {
+    background: #e6f4ff;
+    color: #1e90ff;
+    padding: 14px 14px;
+    border-radius: 10px;
+}
+
+.hero {
+    padding: 100px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 48px;
+    color: #444;
+    line-height: 1.2;
+}
+
+.hero-left span {
+    color: #1e90ff;
+}
+
+.hero-left p {
+    margin: 20px 0;
+    color: #777;
+    line-height: 1.6;
+    max-width: 480px;
+}
+
+.hero-left button {
+    padding: 14px 28px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 44px;
+}
+
+.hero-left button:hover {
+    background: #0066cc;
+}
+
+.hero-left button:active {
+    transform: scale(0.98);
+}
+
+.hero-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.achievements-section {
+    background: #1e90ff;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.achievements-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.achievements-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.achievements-stats {
+    display: flex;
+    gap: 60px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.booking-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.services-section h2 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.services-instruction {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.service-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.service-icon {
+    font-size: 24px;
+    color: #1e90ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.service-icon i {
+    font-size: 24px;
+}
+
+.service-details h4 {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.service-details .service-price {
+    color: #1e90ff;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.service-btn {
+    padding: 8px 20px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.service-btn.remove {
+    background: #dc3545;
+}
+
+.service-btn:hover {
+    opacity: 0.9;
+}
+
+.service-btn:active {
+    transform: scale(0.98);
+}
+
+.services-note {
+    color: #777;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.added-items-section {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.added-items-section h3 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    min-width: 300px;
+}
+
+.items-table th,
+.items-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.items-table th {
+    background: #fff;
+    font-weight: 600;
+    color: #444;
+}
+
+.items-table td {
+    color: #555;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #999;
+    padding: 20px !important;
+}
+
+.total-amount {
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+    font-size: 18px;
+    color: #444;
+}
+
+.total-amount span {
+    color: #1e90ff;
+    font-size: 20px;
+}
+
+.book-now-section {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.book-now-section h3 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
+
+.book-now-btn {
+    padding: 14px 28px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
+    margin-top: 10px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 44px;
+}
+
+.book-now-btn:active {
+    transform: scale(0.98);
+}
+
+.book-now-btn:hover {
+    background: #0066cc;
+}
+
+.book-now-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.booking-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.booking-message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.booking-message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.quality-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.quality-section h2 {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.quality-instruction {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.quality-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.quality-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #1e90ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quality-icon i {
+    font-size: 48px;
+}
+
+.quality-card h3 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.quality-card p {
+    color: #777;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.newsletter-section {
+    padding: 60px 0;
+    background: #1e90ff;
+    color: #fff;
+}
+
+.newsletter-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.newsletter-text h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.newsletter-form-wrapper {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.newsletter-form input {
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    flex: 1;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-btn {
+    padding: 14px 30px;
+    background: #fff;
+    color: #1e90ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 44px;
+    white-space: nowrap;
+}
+
+.subscribe-btn:active {
+    transform: scale(0.98);
+}
+
+.subscribe-btn:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.newsletter-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.newsletter-message.success {
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer {
+    background: #f5f5f5;
+    color: #333;
+    padding: 60px 0 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-section h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.footer-section p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #1e90ff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 5px;
+    color: #333;
+}
+
+.social-icon i {
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background: #1e90ff;
+    color: #fff;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+        padding: 0 30px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero-left h1 {
+        font-size: 42px;
+    }
+
+    .booking-layout {
+        gap: 30px;
+    }
+
+    .quality-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .newsletter-layout {
+        gap: 30px;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-left h1 {
+        font-size: 36px;
+    }
+
+    .hero .container {
+        gap: 30px;
+    }
+
+    .booking-layout {
+        gap: 25px;
+    }
+
+    .quality-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .newsletter-layout {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        height: auto;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 100%;
+        margin-top: 0;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .user {
+        display: none;
+    }
+
+    .navbar.active .mobile-menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .navbar.active .mobile-menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.active .mobile-menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .hero-left p {
+        max-width: 100%;
+        font-size: 15px;
+        margin: 15px 0;
+    }
+
+    .hero-left button {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    .hero-right {
+        margin-top: 30px;
+    }
+
+    .hero-right img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .achievements-section {
+        padding: 30px 0;
+    }
+
+    .achievements-section .container {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .achievements-section h3 {
+        font-size: 24px;
+    }
+
+    .achievements-stats {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        min-width: 120px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+
+    .booking-section {
+        padding: 40px 0;
+    }
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .services-section {
+        text-align: center;
+    }
+
+    .services-section h2 {
+        font-size: 24px;
+    }
+
+    .services-instruction {
+        font-size: 13px;
+    }
+
+    .services-note {
+        text-align: center;
+    }
+
+    .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+        text-align: left;
+    }
+
+    .added-items-section {
+        text-align: center;
+    }
+
+    .added-items-section h3 {
+        font-size: 24px;
+    }
+
+    .items-table {
+        text-align: left;
+    }
+
+    .service-info {
+        width: 100%;
+    }
+
+    .service-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .added-items-section,
+    .book-now-section {
+        padding: 20px;
+    }
+
+    .items-table {
+        font-size: 14px;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .items-table thead,
+    .items-table tbody,
+    .items-table tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .items-table th,
+    .items-table td {
+        padding: 10px 8px;
+        word-wrap: break-word;
+    }
+
+    .items-table th:nth-child(1),
+    .items-table td:nth-child(1) {
+        min-width: 50px;
+    }
+
+    .items-table th:nth-child(2),
+    .items-table td:nth-child(2) {
+        min-width: 120px;
+    }
+
+    .quality-section {
+        padding: 50px 0;
+    }
+
+    .quality-section h2 {
+        font-size: 24px;
+    }
+
+    .quality-instruction {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .quality-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .quality-card {
+        padding: 15px;
+    }
+
+    .quality-icon {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+
+    .quality-icon i {
+        font-size: 40px;
+    }
+
+    .quality-card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .quality-card p {
+        font-size: 13px;
+    }
+
+    .newsletter-section {
+        padding: 50px 0;
+    }
+
+    .newsletter-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .newsletter-text h2 {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    .newsletter-form-wrapper {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .newsletter-form {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+    }
+
+    .subscribe-btn {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    .footer {
+        padding: 40px 0 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer-section h4 {
+        font-size: 16px;
+    }
+
+    .footer-section h5 {
+        font-size: 15px;
+    }
+
+    .footer-section p,
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .social-icon i {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .mobile-menu-toggle {
+        right: 15px;
+    }
+
+    .nav-links {
+        padding: 15px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 30px 0;
+    }
+
+    .hero-left h1 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .hero-left p {
+        font-size: 14px;
+    }
+
+    .hero-left button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .achievements-section {
+        padding: 25px 0;
+    }
+
+    .achievements-section h3 {
+        font-size: 22px;
+    }
+
+    .achievements-stats {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .stat-item {
+        width: 100%;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+    }
+
+    .booking-section {
+        padding: 30px 0;
+    }
+
+    .services-section h2 {
+        font-size: 22px;
+    }
+
+    .services-instruction {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .service-item {
+        padding: 12px;
+    }
+
+    .service-icon {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .service-icon i {
+        font-size: 20px;
+    }
+
+    .service-details h4 {
+        font-size: 15px;
+    }
+
+    .service-details .service-price {
+        font-size: 16px;
+    }
+
+    .service-btn {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    .added-items-section h3 {
+        font-size: 22px;
+    }
+
+    .book-now-section h3 {
+        font-size: 18px;
+    }
+
+    .items-table {
+        font-size: 12px;
+    }
+
+    .items-table th,
+    .items-table td {
+        padding: 6px 4px;
+    }
+
+    .total-amount {
+        font-size: 16px;
+    }
+
+    .total-amount span {
+        font-size: 18px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input {
+        padding: 12px;
+        font-size: 16px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    .book-now-btn {
+        padding: 14px 24px;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .quality-section {
+        padding: 40px 0;
+    }
+
+    .quality-section h2 {
+        font-size: 22px;
+    }
+
+    .quality-instruction {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .quality-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .quality-card {
+        padding: 20px 15px;
+    }
+
+    .quality-icon {
+        font-size: 36px;
+    }
+
+    .quality-icon i {
+        font-size: 36px;
+    }
+
+    .quality-card h3 {
+        font-size: 17px;
+    }
+
+    .quality-card p {
+        font-size: 13px;
+    }
+
+    .newsletter-section {
+        padding: 40px 0;
+    }
+
+    .newsletter-text h2 {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .newsletter-form input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .subscribe-btn {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    .footer {
+        padding: 30px 0 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h4 {
+        font-size: 16px;
+    }
+
+    .footer-section h5 {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .hero-left h1 {
+        font-size: 20px;
+    }
+
+    .achievements-section h3 {
+        font-size: 20px;
+    }
+
+    .stat-number {
+        font-size: 20px;
+    }
+
+    .services-section h2 {
+        font-size: 20px;
+    }
+
+    .added-items-section h3 {
+        font-size: 20px;
+    }
+
+    .quality-section h2 {
+        font-size: 20px;
+    }
+
+    .newsletter-text h2 {
+        font-size: 20px;
+    }
+
+    .items-table {
+        font-size: 11px;
+    }
+
+    .items-table th,
+    .items-table td {
+        padding: 8px 4px;
+        font-size: 11px;
+    }
+}
