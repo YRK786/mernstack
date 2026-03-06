@@ -81,7 +81,7 @@ body {
     max-width: 480px;
 }
 
-.hero-left button {
+.cstm-btn {
     padding: 14px 28px;
     background: #1e90ff;
     color: #fff;
@@ -93,13 +93,15 @@ body {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     min-height: 44px;
+    display: inline-block;
+    text-decoration: unset;
 }
 
-.hero-left button:hover {
+.cstm-btn:hover {
     background: #0066cc;
 }
 
-.hero-left button:active {
+.cstm-btn:active {
     transform: scale(0.98);
 }
 
@@ -825,7 +827,7 @@ body {
         margin: 15px 0;
     }
 
-    .hero-left button {
+    .cstm-btn {
         width: 100%;
         max-width: 300px;
         margin-top: 20px;
@@ -1116,7 +1118,7 @@ body {
         font-size: 14px;
     }
 
-    .hero-left button {
+    .cstm-btn {
         font-size: 14px;
         padding: 12px 20px;
     }

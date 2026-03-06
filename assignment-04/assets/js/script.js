@@ -175,10 +175,23 @@ function initMobileMenu() {
     });
 }
 
+function initScrollDownButtons() {
+    document.querySelectorAll(".scroll_down").forEach(btn => {
+        btn.onclick = e => {
+            const target = document.querySelector(btn.hash);
+            if (target) {
+                e.preventDefault();
+                window.scrollTo({ top: target.offsetTop, behavior: "smooth" });
+            }
+        };
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     renderServices();
     renderCart();
     initBookingForm();
     initAchievementsCounter();
     initMobileMenu();
+    initScrollDownButtons();
 });
