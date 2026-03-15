@@ -15,18 +15,18 @@ function renderServices() {
     services.forEach(service => {
         const isInCart = cart.some(item => item.id === service.id);
         const serviceItem = document.createElement('div');
-        serviceItem.className = 'service-item';
+        serviceItem.className = 'single-service';
         serviceItem.innerHTML = `
-            <div class="service-info">
-                <div class="service-icon">
+            <div class="service-content">
+                <div class="icon-box">
                     <i class="fas ${service.icon}"></i>
                 </div>
-                <div class="service-details">
+                <div class="service-text">
                     <h4>${service.name}</h4>
-                    <div class="service-price">₹${service.price.toFixed(2)}</div>
+                    <div class="price-text">₹${service.price.toFixed(2)}</div>
                 </div>
             </div>
-            <button class="service-btn ${isInCart ? 'remove' : ''}" onclick="toggleService(${service.id})">
+            <button class="add-btn ${isInCart ? 'remove' : ''}" onclick="toggleService(${service.id})">
                 ${isInCart ? 'Remove Item' : 'Add Item'}
             </button>
         `;
@@ -66,7 +66,7 @@ function initBookingForm() {
         e.preventDefault();
         if (!cart.length) {
             bookingMessage.textContent = 'Please add at least one service to your cart.';
-            bookingMessage.className = 'booking-message error';
+            bookingMessage.className = 'message-box error';
             bookingMessage.style.display = 'block';
             return;
         }
@@ -86,13 +86,13 @@ function initBookingForm() {
         bookNowBtn.disabled = true;
         bookNowBtn.textContent = 'Sending...';
         bookingMessage.textContent = 'Processing your booking...';
-        bookingMessage.className = 'booking-message';
+        bookingMessage.className = 'message-box';
         bookingMessage.style.display = 'block';
         if (typeof emailjs !== 'undefined') {
             emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
                 .then(() => {
                     bookingMessage.textContent = 'Thank you For Booking the Service We will get back to you soon!';
-                    bookingMessage.className = 'booking-message success';
+                    bookingMessage.className = 'message-box success';
                     bookingForm.reset();
                     cart.length = 0;
                     renderServices();
@@ -114,13 +114,13 @@ function initBookingForm() {
                         errorMessage = 'Email configuration error: Please configure the recipient email in EmailJS dashboard.';
                     else if (error.text) errorMessage = `Error: ${error.text}`;
                     bookingMessage.textContent = errorMessage;
-                    bookingMessage.className = 'booking-message error';
+                    bookingMessage.className = 'message-box error';
                     bookNowBtn.textContent = 'Book now';
                     bookNowBtn.disabled = false;
                 });
         } else {
             bookingMessage.textContent = 'Thank you For Booking the Service We will get back to you soon!';
-            bookingMessage.className = 'booking-message success';
+            bookingMessage.className = 'message-box success';
             bookingForm.reset();
             cart.length = 0;
             renderServices();
@@ -134,7 +134,7 @@ function initBookingForm() {
 }
 
 function initAchievementsCounter() {
-    const stats = document.querySelectorAll('.stat-number[data-target]');
+    const stats = document.querySelectorAll('.achievement-number[data-target]');
     if (!stats.length) return;
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -155,9 +155,9 @@ function initAchievementsCounter() {
 }
 
 function initMobileMenu() {
-    const toggle = document.querySelector('.mobile-menu-toggle'),
-          navbar = document.querySelector('.navbar'),
-          navLinks = document.querySelector('.nav-links');
+    const toggle = document.querySelector('.menu-btn'),
+          navbar = document.querySelector('.my-navbar'),
+          navLinks = document.querySelector('.menu-list');
     if (!toggle) return;
     toggle.addEventListener('click', () => {
         navbar.classList.toggle('active');

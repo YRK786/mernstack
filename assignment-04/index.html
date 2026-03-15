@@ -11,24 +11,24 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">Logo</div>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <nav class="my-navbar">
+        <div class="my-logo">Logo</div>
+        <button class="menu-btn">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <ul class="nav-links">
+        <ul class="menu-list">
             <li><a href="#">Home</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
-        <div class="user">Username</div>
+        <div class="username-box">Username</div>
     </nav>
-    <section class="hero">
-        <div class="container">
-            <div class="hero-left">
+    <section class="main-hero">
+        <div class="wrapper-box">
+            <div class="hero-text">
                 <h1>
                     Revitalize Your <br />
                     Clothes with Expert <br />
@@ -39,49 +39,49 @@
                     convenience. Schedule a pickup and rediscover the freshness of your
                     clothes today!
                 </p>
-                <a href="#booking-section" class="cstm-btn scroll_down">Book a service today!</a>
+                <a href="#booking-section" class="book-btn scroll_down">Book a service today!</a>
             </div>
-            <div class="hero-right">
+            <div class="hero-image">
                 <img src="assets/img/dirty-shirt-laundry-service.jpg" alt="Dirty Shirt Laundry Service" />
             </div>
         </div>
     </section>
 
     <section class="achievements-section">
-        <div class="container">
+        <div class="wrapper-box">
             <h3>Our Achievements</h3>
-            <div class="achievements-stats">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="15" data-suffix="+">0+</div>
-                    <div class="stat-label">Laundry Services</div>
+            <div class="achievements-box">
+                <div class="achievement-item">
+                    <div class="achievement-number" data-target="15" data-suffix="+">0+</div>
+                    <div class="achievement-label">Laundry Services</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="240" data-suffix="+">0+</div>
-                    <div class="stat-label">Happy Customers</div>
+                <div class="achievement-item">
+                    <div class="achievement-number" data-target="240" data-suffix="+">0+</div>
+                    <div class="achievement-label">Happy Customers</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="2" data-suffix="+ Yrs">0+ Yrs</div>
-                    <div class="stat-label">Experience</div>
+                <div class="achievement-item">
+                    <div class="achievement-number" data-target="2" data-suffix="+ Yrs">0+ Yrs</div>
+                    <div class="achievement-label">Experience</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="booking-section" class="booking-section">
-        <div class="container">
-            <div class="booking-layout">
-                <div class="services-section">
+    <section id="booking-section" class="booking-page">
+        <div class="wrapper-box">
+            <div class="booking-wrapper">
+                <div class="services-list-section">
                     <h2>Our Services</h2>
-                    <p class="services-instruction">Click On The Add To Cart Button To Add The Services To Your Cart</p>
-                    <div class="services-list" id="servicesList">
+                    <p class="instruction-text">Click On The Add To Cart Button To Add The Services To Your Cart</p>
+                    <div class="services-container" id="servicesList">
                     </div>
-                    <p class="services-note">Add the items to the cart and book now</p>
+                    <p class="note-text">Add the items to the cart and book now</p>
                 </div>
-                <div class="booking-right">
-                    <div class="added-items-section">
+                <div class="cart-section">
+                    <div class="items-box">
                         <h3>Added Items</h3>
-                        <div class="table-wrapper">
-                            <table class="items-table">
+                        <div class="table-container">
+                            <table class="cart-table">
                                 <thead>
                                     <tr>
                                         <th>S.No</th>
@@ -91,32 +91,32 @@
                                 </thead>
                                 <tbody id="cartItems">
                                     <tr>
-                                        <td colspan="3" class="empty-cart">No items added yet</td>
+                                        <td colspan="3" class="empty-message">No items added yet</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="total-amount">
+                        <div class="total-price">
                             <strong>Total Amount: <span id="totalAmount">₹0.00</span></strong>
                         </div>
                     </div>
-                    <div class="book-now-section">
+                    <div class="form-section">
                         <h3>Book Now</h3>
-                        <form id="bookingForm" class="booking-form">
-                            <div class="form-group">
+                        <form id="bookingForm" class="my-form">
+                            <div class="input-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" name="name" placeholder="Full Name" required>
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
                                 <label for="email">Email ID</label>
                                 <input type="email" id="email" name="email" placeholder="Email ID" required>
                             </div>
-                            <div class="form-group">
+                            <div class="input-group">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
                             </div>
-                            <button type="submit" id="bookNowBtn" class="book-now-btn">Book now</button>
-                            <div id="bookingMessage" class="booking-message"></div>
+                            <button type="submit" id="bookNowBtn" class="submit-btn">Book now</button>
+                            <div id="bookingMessage" class="message-box"></div>
                         </form>
                     </div>
                 </div>
@@ -124,28 +124,28 @@
         </div>
     </section>
 
-    <section class="quality-section">
-        <div class="container">
+    <section class="features-section">
+        <div class="wrapper-box">
             <h2>Why Choose Us?</h2>
-            <p class="quality-instruction">Discover the qualities that set our laundry service apart from the rest.</p>
-            <div class="quality-grid">
-                <div class="quality-card">
-                    <div class="quality-icon"><i class="fas fa-basket-shopping"></i></div>
+            <p class="features-text">Discover the qualities that set our laundry service apart from the rest.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-basket-shopping"></i></div>
                     <h3>Premium Services</h3>
                     <p>Revive your wardrobe with meticulous dry cleaning, ensuring garments look and feel as good as new.</p>
                 </div>
-                <div class="quality-card">
-                    <div class="quality-icon"><i class="fas fa-headset"></i></div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
                     <h3>Quick Support</h3>
                     <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
                 </div>
-                <div class="quality-card">
-                    <div class="quality-icon"><i class="fas fa-truck"></i></div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
                     <h3>Hassle Free Delivery</h3>
                     <p>Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.</p>
                 </div>
-                <div class="quality-card">
-                    <div class="quality-icon"><i class="fas fa-indian-rupee-sign"></i></div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-indian-rupee-sign"></i></div>
                     <h3>Affordable Prices</h3>
                     <p>Experience exceptional care without breaking the bank - our affordable prices make laundry day stress-free.</p>
                 </div>
@@ -153,35 +153,35 @@
         </div>
     </section>
 
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-layout">
-                <div class="newsletter-text">
+    <section class="subscribe-section">
+        <div class="wrapper-box">
+            <div class="subscribe-wrapper">
+                <div class="subscribe-text">
                     <h2>Subscribe to our newsletter.</h2>
                 </div>
-                <div class="newsletter-form-wrapper">
-                    <form id="newsletterForm" class="newsletter-form">
+                <div class="form-wrapper">
+                    <form id="newsletterForm" class="subscribe-form">
                         <input type="text" id="newsletterName" name="newsletterName" placeholder="Full name" required>
                         <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Email" required>
-                        <button type="submit" class="subscribe-btn">Subscribe</button>
-                        <div id="newsletterMessage" class="newsletter-message"></div>
+                        <button type="submit" class="subscribe-button">Subscribe</button>
+                        <div id="newsletterMessage" class="subscribe-message"></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+    <footer class="footer-area">
+        <div class="wrapper-box">
+            <div class="footer-grid">
+                <div class="footer-box">
                     <h4>Logo</h4>
                     <h5>About us</h5>
                     <p>Lorem Ipsum Dolor Sit Amet Consectetur. Sed At Congue.</p>
                 </div>
-                <div class="footer-section">
+                <div class="footer-box">
                     <h4>Important Links</h4>
-                    <ul class="footer-links">
+                    <ul class="links-list">
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Contact us</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -189,22 +189,25 @@
                         <li><a href="#">Refund Policy</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-box">
                     <h4>Contact</h4>
-                    <ul class="footer-links">
+                    <ul class="links-list">
                         <li><a href="mailto:mail@site.com">mail@site.com</a></li>
                         <li><a href="tel:+919123456780">+91 91234 56780</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-box">
                     <h4>Follow Us</h4>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <div class="icons-box">
+                        <a href="#" class="icon-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="icon-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="copyright-box">
+                <p class="copyright-text">&copy; <script>document.write(`${new Date().getFullYear()}`)</script> Laundry Hero. All rights reserved.</p>
             </div>
         </div>
     </footer>

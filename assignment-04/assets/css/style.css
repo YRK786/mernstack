@@ -17,7 +17,7 @@ body {
     position: relative;
 }
 
-.navbar {
+.my-navbar {
     height: 100px;
     padding: 0 40px;
     display: flex;
@@ -26,62 +26,81 @@ body {
     background: #fff;
 }
 
-.logo {
+.my-logo {
     font-size: 22px;
     font-weight: bold;
 }
 
-.nav-links {
+.menu-list {
     list-style: none;
     display: flex;
     gap: 25px;
 }
 
-.nav-links a {
+.menu-list a {
     text-decoration: none;
     color: #555;
 }
 
-.user {
+.username-box {
     background: #e6f4ff;
     color: #1e90ff;
     padding: 14px 14px;
     border-radius: 10px;
 }
 
-.hero {
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.menu-btn span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.main-hero {
     padding: 100px 0;
 }
 
-.hero .container {
+.main-hero .wrapper-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
 }
 
-.hero-left {
+.hero-text {
     width: 50%;
 }
 
-.hero-left h1 {
+.hero-text h1 {
     font-size: 48px;
     color: #444;
     line-height: 1.2;
 }
 
-.hero-left span {
+.hero-text span {
     color: #1e90ff;
 }
 
-.hero-left p {
+.hero-text p {
     margin: 20px 0;
     color: #777;
     line-height: 1.6;
     max-width: 480px;
 }
 
-.cstm-btn {
+.book-btn {
     padding: 14px 28px;
     background: #1e90ff;
     color: #fff;
@@ -97,21 +116,21 @@ body {
     text-decoration: unset;
 }
 
-.cstm-btn:hover {
+.book-btn:hover {
     background: #0066cc;
 }
 
-.cstm-btn:active {
+.book-btn:active {
     transform: scale(0.98);
 }
 
-.hero-right {
+.hero-image {
     width: 50%;
     display: flex;
     justify-content: center;
 }
 
-.hero-right img {
+.hero-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -119,30 +138,12 @@ body {
     max-width: 100%;
 }
 
-.container {
+.wrapper-box {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    z-index: 1001;
-}
-
-.mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    border-radius: 3px;
-    transition: all 0.3s;
-}
 
 .achievements-section {
     background: #1e90ff;
@@ -150,7 +151,7 @@ body {
     padding: 40px 0;
 }
 
-.achievements-section .container {
+.achievements-section .wrapper-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,57 +162,57 @@ body {
     font-weight: 600;
 }
 
-.achievements-stats {
+.achievements-box {
     display: flex;
     gap: 60px;
 }
 
-.stat-item {
+.achievement-item {
     text-align: center;
 }
 
-.stat-number {
+.achievement-number {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.stat-label {
+.achievement-label {
     font-size: 16px;
     opacity: 0.9;
 }
 
-.booking-section {
+.booking-page {
     padding: 80px 0;
     background: #fff;
 }
 
-.booking-layout {
+.booking-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-.services-section h2 {
+.services-list-section h2 {
     font-size: 28px;
     color: #444;
     margin-bottom: 10px;
 }
 
-.services-instruction {
+.instruction-text {
     color: #777;
     margin-bottom: 30px;
     font-size: 14px;
 }
 
-.services-list {
+.services-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 15px;
 }
 
-.service-item {
+.single-service {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -221,14 +222,14 @@ body {
     background: #fff;
 }
 
-.service-info {
+.service-content {
     display: flex;
     align-items: center;
     gap: 15px;
     flex: 1;
 }
 
-.service-icon {
+.icon-box {
     font-size: 24px;
     color: #1e90ff;
     display: flex;
@@ -238,23 +239,23 @@ body {
     height: 40px;
 }
 
-.service-icon i {
+.icon-box i {
     font-size: 24px;
 }
 
-.service-details h4 {
+.service-text h4 {
     font-size: 16px;
     color: #444;
     margin-bottom: 5px;
 }
 
-.service-details .service-price {
+.service-text .price-text {
     color: #1e90ff;
     font-weight: 600;
     font-size: 18px;
 }
 
-.service-btn {
+.add-btn {
     padding: 8px 20px;
     background: #1e90ff;
     color: #fff;
@@ -269,115 +270,115 @@ body {
     min-width: 44px;
 }
 
-.service-btn.remove {
+.add-btn.remove {
     background: #dc3545;
 }
 
-.service-btn:hover {
+.add-btn:hover {
     opacity: 0.9;
 }
 
-.service-btn:active {
+.add-btn:active {
     transform: scale(0.98);
 }
 
-.services-note {
+.note-text {
     color: #777;
     font-size: 14px;
     margin-top: 10px;
 }
 
-.added-items-section {
+.items-box {
     background: #f9f9f9;
     padding: 25px;
     border-radius: 10px;
     margin-bottom: 30px;
 }
 
-.added-items-section h3 {
+.items-box h3 {
     font-size: 28px;
     color: #444;
     margin-bottom: 20px;
 }
 
-.table-wrapper {
+.table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-.items-table {
+.cart-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 15px;
     min-width: 300px;
 }
 
-.items-table th,
-.items-table td {
+.cart-table th,
+.cart-table td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.items-table th {
+.cart-table th {
     background: #fff;
     font-weight: 600;
     color: #444;
 }
 
-.items-table td {
+.cart-table td {
     color: #555;
 }
 
-.empty-cart {
+.empty-message {
     text-align: center;
     color: #999;
     padding: 20px !important;
 }
 
-.total-amount {
+.total-price {
     padding-top: 15px;
     border-top: 2px solid #ddd;
     font-size: 18px;
     color: #444;
 }
 
-.total-amount span {
+.total-price span {
     color: #1e90ff;
     font-size: 20px;
 }
 
-.book-now-section {
+.form-section {
     background: #f9f9f9;
     padding: 25px;
     border-radius: 10px;
 }
 
-.book-now-section h3 {
+.form-section h3 {
     font-size: 20px;
     color: #444;
     margin-bottom: 20px;
 }
 
-.booking-form {
+.my-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.form-group {
+.input-group {
     display: flex;
     flex-direction: column;
 }
 
-.form-group label {
+.input-group label {
     margin-bottom: 5px;
     color: #555;
     font-weight: 500;
     font-size: 14px;
 }
 
-.form-group input {
+.input-group input {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -385,12 +386,12 @@ body {
     transition: border-color 0.3s;
 }
 
-.form-group input:focus {
+.input-group input:focus {
     outline: none;
     border-color: #1e90ff;
 }
 
-.book-now-btn {
+.submit-btn {
     padding: 14px 28px;
     background: #1e90ff;
     color: #fff;
@@ -406,20 +407,20 @@ body {
     min-height: 44px;
 }
 
-.book-now-btn:active {
+.submit-btn:active {
     transform: scale(0.98);
 }
 
-.book-now-btn:hover {
+.submit-btn:hover {
     background: #0066cc;
 }
 
-.book-now-btn:disabled {
+.submit-btn:disabled {
     background: #ccc;
     cursor: not-allowed;
 }
 
-.booking-message {
+.message-box {
     margin-top: 15px;
     padding: 12px;
     border-radius: 5px;
@@ -428,51 +429,51 @@ body {
     display: none;
 }
 
-.booking-message.success {
+.message-box.success {
     display: block;
     background: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
 }
 
-.booking-message.error {
+.message-box.error {
     display: block;
     background: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
 
-.quality-section {
+.features-section {
     padding: 80px 0;
-    background: #fff;
+    background: #f9f9f9;
 }
 
-.quality-section h2 {
+.features-section h2 {
     font-size: 28px;
     color: #444;
     margin-bottom: 10px;
     text-align: center;
 }
 
-.quality-instruction {
+.features-text {
     color: #777;
     margin-bottom: 30px;
     font-size: 14px;
     text-align: center;
 }
 
-.quality-grid {
+.features-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
-.quality-card {
+.feature-card {
     text-align: center;
     padding: 20px;
 }
 
-.quality-icon {
+.feature-icon {
     font-size: 48px;
     margin-bottom: 15px;
     color: #1e90ff;
@@ -481,56 +482,56 @@ body {
     justify-content: center;
 }
 
-.quality-icon i {
+.feature-icon i {
     font-size: 48px;
 }
 
-.quality-card h3 {
+.feature-card h3 {
     font-size: 20px;
     color: #444;
     margin-bottom: 15px;
     font-weight: 600;
 }
 
-.quality-card p {
+.feature-card p {
     color: #777;
     line-height: 1.6;
     font-size: 14px;
 }
 
-.newsletter-section {
+.subscribe-section {
     padding: 60px 0;
     background: #1e90ff;
     color: #fff;
 }
 
-.newsletter-layout {
+.subscribe-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
 }
 
-.newsletter-text h2 {
+.subscribe-text h2 {
     font-size: 28px;
     font-weight: 600;
     margin: 0;
 }
 
-.newsletter-form-wrapper {
+.form-wrapper {
     flex: 1;
     max-width: 100%;
     width: 100%;
 }
 
-.newsletter-form {
+.subscribe-form {
     display: flex;
     flex-direction: row;
     gap: 15px;
     align-items: center;
 }
 
-.newsletter-form input {
+.subscribe-form input {
     padding: 14px;
     border: none;
     border-radius: 5px;
@@ -538,12 +539,12 @@ body {
     flex: 1;
 }
 
-.newsletter-form input:focus {
+.subscribe-form input:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
-.subscribe-btn {
+.subscribe-button {
     padding: 14px 30px;
     background: #fff;
     color: #1e90ff;
@@ -559,16 +560,16 @@ body {
     white-space: nowrap;
 }
 
-.subscribe-btn:active {
+.subscribe-button:active {
     transform: scale(0.98);
 }
 
-.subscribe-btn:hover {
+.subscribe-button:hover {
     background: #f0f0f0;
     transform: scale(1.05);
 }
 
-.newsletter-message {
+.subscribe-message {
     margin-top: 15px;
     padding: 12px;
     border-radius: 5px;
@@ -577,32 +578,32 @@ body {
     display: none;
 }
 
-.newsletter-message.success {
+.subscribe-message.success {
     display: block;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.footer {
-    background: #f5f5f5;
+.footer-area {
+    background: #f9f9f9;
     color: #333;
     padding: 60px 0 40px;
 }
 
-.footer-content {
+.footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
-.footer-section h4 {
+.footer-box h4 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
     color: #333;
 }
 
-.footer-section h5 {
+.footer-box h5 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -610,37 +611,37 @@ body {
     color: #333;
 }
 
-.footer-section p {
+.footer-box p {
     color: #666;
     line-height: 1.6;
     font-size: 14px;
 }
 
-.footer-links {
+.links-list {
     list-style: none;
 }
 
-.footer-links li {
+.links-list li {
     margin-bottom: 10px;
 }
 
-.footer-links a {
+.links-list a {
     color: #666;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s;
 }
 
-.footer-links a:hover {
+.links-list a:hover {
     color: #1e90ff;
 }
 
-.social-icons {
+.icons-box {
     display: flex;
     gap: 10px;
 }
 
-.social-icon {
+.icon-link {
     font-size: 20px;
     text-decoration: none;
     transition: transform 0.3s, background 0.3s;
@@ -654,95 +655,113 @@ body {
     color: #333;
 }
 
-.social-icon i {
+.icon-link i {
     font-size: 20px;
 }
 
-.social-icon:hover {
+.icon-link:hover {
     transform: scale(1.1);
     background: #1e90ff;
     color: #fff;
 }
 
+.copyright-box {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.copyright-text {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
 @media (max-width: 1199px) {
-    .container {
+    .wrapper-box {
         max-width: 960px;
         padding: 0 30px;
     }
 
-    .hero {
+    .main-hero {
         padding: 80px 0;
     }
 
-    .hero-left h1 {
+    .hero-text h1 {
         font-size: 42px;
     }
 
-    .booking-layout {
+    .booking-wrapper {
         gap: 30px;
     }
 
-    .quality-grid {
+    .features-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
 
-    .newsletter-layout {
+    .subscribe-wrapper {
         gap: 30px;
     }
 
-    .footer-content {
+    .footer-grid {
         gap: 30px;
     }
 }
 
 @media (max-width: 991px) {
-    .container {
+    .wrapper-box {
         padding: 0 25px;
     }
 
-    .hero {
+    .main-hero {
         padding: 60px 0;
     }
 
-    .hero-left h1 {
+    .hero-text h1 {
         font-size: 36px;
     }
 
-    .hero .container {
+    .main-hero .wrapper-box {
         gap: 30px;
     }
 
-    .booking-layout {
+    .booking-wrapper {
         gap: 25px;
     }
 
-    .quality-grid {
+    .features-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    .newsletter-layout {
+    .subscribe-wrapper {
         flex-wrap: wrap;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
 @media (max-width: 767px) {
-    .container {
+    .wrapper-box {
         padding: 0 20px;
     }
 
-    .navbar {
+    .my-navbar {
         padding: 15px 20px;
         height: auto;
         position: relative;
     }
 
-    .logo {
+    .my-logo {
         font-size: 20px;
     }
 
-    .mobile-menu-toggle {
+    .menu-btn {
         display: flex;
         position: absolute;
         right: 20px;
@@ -750,7 +769,7 @@ body {
         transform: translateY(-50%);
     }
 
-    .nav-links {
+    .menu-list {
         display: none;
         position: absolute;
         top: 100%;
@@ -766,68 +785,68 @@ body {
         gap: 0;
     }
 
-    .nav-links.active {
+    .menu-list.active {
         display: flex;
     }
 
-    .nav-links li {
+    .menu-list li {
         width: 100%;
         padding: 12px 0;
         border-bottom: 1px solid #eee;
     }
 
-    .nav-links li:last-child {
+    .menu-list li:last-child {
         border-bottom: none;
     }
 
-    .nav-links a {
+    .menu-list a {
         display: block;
         width: 100%;
         font-size: 16px;
     }
 
-    .user {
+    .username-box {
         display: none;
     }
 
-    .navbar.active .mobile-menu-toggle span:nth-child(1) {
+    .my-navbar.active .menu-btn span:nth-child(1) {
         transform: rotate(45deg) translate(8px, 8px);
     }
 
-    .navbar.active .mobile-menu-toggle span:nth-child(2) {
+    .my-navbar.active .menu-btn span:nth-child(2) {
         opacity: 0;
     }
 
-    .navbar.active .mobile-menu-toggle span:nth-child(3) {
+    .my-navbar.active .menu-btn span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
     }
 
-    .hero {
+    .main-hero {
         padding: 40px 0;
     }
 
-    .hero .container {
+    .main-hero .wrapper-box {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-left,
-    .hero-right {
+    .hero-text,
+    .hero-image {
         width: 100%;
     }
 
-    .hero-left h1 {
+    .hero-text h1 {
         font-size: 32px;
         line-height: 1.3;
     }
 
-    .hero-left p {
+    .hero-text p {
         max-width: 100%;
         font-size: 15px;
         margin: 15px 0;
     }
 
-    .cstm-btn {
+    .book-btn {
         width: 100%;
         max-width: 300px;
         margin-top: 20px;
@@ -835,11 +854,11 @@ body {
         font-size: 15px;
     }
 
-    .hero-right {
+    .hero-image {
         margin-top: 30px;
     }
 
-    .hero-right img {
+    .hero-image img {
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -850,7 +869,7 @@ body {
         padding: 30px 0;
     }
 
-    .achievements-section .container {
+    .achievements-section .wrapper-box {
         flex-direction: column;
         gap: 25px;
         text-align: center;
@@ -860,51 +879,51 @@ body {
         font-size: 24px;
     }
 
-    .achievements-stats {
+    .achievements-box {
         flex-direction: row;
         justify-content: center;
         gap: 30px;
         flex-wrap: wrap;
     }
 
-    .stat-item {
+    .achievement-item {
         min-width: 120px;
     }
 
-    .stat-number {
+    .achievement-number {
         font-size: 28px;
     }
 
-    .stat-label {
+    .achievement-label {
         font-size: 14px;
     }
 
-    .booking-section {
+    .booking-page {
         padding: 40px 0;
     }
 
-    .booking-layout {
+    .booking-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
     }
 
-    .services-section {
+    .services-list-section {
         text-align: center;
     }
 
-    .services-section h2 {
+    .services-list-section h2 {
         font-size: 24px;
     }
 
-    .services-instruction {
+    .instruction-text {
         font-size: 13px;
     }
 
-    .services-note {
+    .note-text {
         text-align: center;
     }
 
-    .service-item {
+    .single-service {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
@@ -912,213 +931,213 @@ body {
         text-align: left;
     }
 
-    .added-items-section {
+    .items-box {
         text-align: center;
     }
 
-    .added-items-section h3 {
+    .items-box h3 {
         font-size: 24px;
     }
 
-    .items-table {
+    .cart-table {
         text-align: left;
     }
 
-    .service-info {
+    .service-content {
         width: 100%;
     }
 
-    .service-btn {
+    .add-btn {
         width: 100%;
         padding: 12px;
         font-size: 14px;
     }
 
-    .added-items-section,
-    .book-now-section {
+    .items-box,
+    .form-section {
         padding: 20px;
     }
 
-    .items-table {
+    .cart-table {
         font-size: 14px;
         display: block;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
 
-    .items-table thead,
-    .items-table tbody,
-    .items-table tr {
+    .cart-table thead,
+    .cart-table tbody,
+    .cart-table tr {
         display: table;
         width: 100%;
         table-layout: fixed;
     }
 
-    .items-table th,
-    .items-table td {
+    .cart-table th,
+    .cart-table td {
         padding: 10px 8px;
         word-wrap: break-word;
     }
 
-    .items-table th:nth-child(1),
-    .items-table td:nth-child(1) {
+    .cart-table th:nth-child(1),
+    .cart-table td:nth-child(1) {
         min-width: 50px;
     }
 
-    .items-table th:nth-child(2),
-    .items-table td:nth-child(2) {
+    .cart-table th:nth-child(2),
+    .cart-table td:nth-child(2) {
         min-width: 120px;
     }
 
-    .quality-section {
+    .features-section {
         padding: 50px 0;
     }
 
-    .quality-section h2 {
+    .features-section h2 {
         font-size: 24px;
     }
 
-    .quality-instruction {
+    .features-text {
         font-size: 13px;
         margin-bottom: 20px;
     }
 
-    .quality-grid {
+    .features-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    .quality-card {
+    .feature-card {
         padding: 15px;
     }
 
-    .quality-icon {
+    .feature-icon {
         font-size: 40px;
         margin-bottom: 12px;
     }
 
-    .quality-icon i {
+    .feature-icon i {
         font-size: 40px;
     }
 
-    .quality-card h3 {
+    .feature-card h3 {
         font-size: 18px;
         margin-bottom: 12px;
     }
 
-    .quality-card p {
+    .feature-card p {
         font-size: 13px;
     }
 
-    .newsletter-section {
+    .subscribe-section {
         padding: 50px 0;
     }
 
-    .newsletter-layout {
+    .subscribe-wrapper {
         flex-direction: column;
         text-align: center;
         gap: 30px;
     }
 
-    .newsletter-text h2 {
+    .subscribe-text h2 {
         font-size: 24px;
         margin-bottom: 0;
     }
 
-    .newsletter-form-wrapper {
+    .form-wrapper {
         max-width: 100%;
         width: 100%;
     }
 
-    .newsletter-form {
+    .subscribe-form {
         max-width: 100%;
         flex-direction: column;
     }
 
-    .newsletter-form input {
+    .subscribe-form input {
         width: 100%;
     }
 
-    .subscribe-btn {
+    .subscribe-button {
         width: 100%;
         align-self: stretch;
     }
 
-    .footer {
+    .footer-area {
         padding: 40px 0 30px;
     }
 
-    .footer-content {
+    .footer-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 
-    .footer-section h4 {
+    .footer-box h4 {
         font-size: 16px;
     }
 
-    .footer-section h5 {
+    .footer-box h5 {
         font-size: 15px;
     }
 
-    .footer-section p,
-    .footer-links a {
+    .footer-box p,
+    .links-list a {
         font-size: 13px;
     }
 
-    .social-icons {
+    .icons-box {
         justify-content: flex-start;
         flex-wrap: wrap;
     }
 
-    .social-icon {
+    .icon-link {
         width: 35px;
         height: 35px;
         font-size: 18px;
     }
 
-    .social-icon i {
+    .icon-link i {
         font-size: 18px;
     }
 
-    .container {
+    .wrapper-box {
         padding: 0 15px;
     }
 
-    .navbar {
+    .my-navbar {
         padding: 12px 15px;
     }
 
-    .logo {
+    .my-logo {
         font-size: 18px;
     }
 
-    .mobile-menu-toggle {
+    .menu-btn {
         right: 15px;
     }
 
-    .nav-links {
+    .menu-list {
         padding: 15px;
     }
 
-    .nav-links a {
+    .menu-list a {
         font-size: 15px;
     }
 
-    .hero {
+    .main-hero {
         padding: 30px 0;
     }
 
-    .hero-left h1 {
+    .hero-text h1 {
         font-size: 24px;
         line-height: 1.2;
     }
 
-    .hero-left p {
+    .hero-text p {
         font-size: 14px;
     }
 
-    .cstm-btn {
+    .book-btn {
         font-size: 14px;
         padding: 12px 20px;
     }
@@ -1131,94 +1150,94 @@ body {
         font-size: 22px;
     }
 
-    .achievements-stats {
+    .achievements-box {
         flex-direction: column;
         gap: 20px;
         width: 100%;
     }
 
-    .stat-item {
+    .achievement-item {
         width: 100%;
     }
 
-    .stat-number {
+    .achievement-number {
         font-size: 24px;
     }
 
-    .stat-label {
+    .achievement-label {
         font-size: 13px;
     }
 
-    .booking-section {
+    .booking-page {
         padding: 30px 0;
     }
 
-    .services-section h2 {
+    .services-list-section h2 {
         font-size: 22px;
     }
 
-    .services-instruction {
+    .instruction-text {
         font-size: 12px;
         margin-bottom: 20px;
     }
 
-    .service-item {
+    .single-service {
         padding: 12px;
     }
 
-    .service-icon {
+    .icon-box {
         font-size: 20px;
         width: 35px;
         height: 35px;
     }
 
-    .service-icon i {
+    .icon-box i {
         font-size: 20px;
     }
 
-    .service-details h4 {
+    .service-text h4 {
         font-size: 15px;
     }
 
-    .service-details .service-price {
+    .service-text .price-text {
         font-size: 16px;
     }
 
-    .service-btn {
+    .add-btn {
         font-size: 13px;
         padding: 8px 15px;
     }
 
-    .added-items-section h3 {
+    .items-box h3 {
         font-size: 22px;
     }
 
-    .book-now-section h3 {
+    .form-section h3 {
         font-size: 18px;
     }
 
-    .items-table {
+    .cart-table {
         font-size: 12px;
     }
 
-    .items-table th,
-    .items-table td {
+    .cart-table th,
+    .cart-table td {
         padding: 6px 4px;
     }
 
-    .total-amount {
+    .total-price {
         font-size: 16px;
     }
 
-    .total-amount span {
+    .total-price span {
         font-size: 18px;
     }
 
-    .form-group label {
+    .input-group label {
         font-size: 13px;
     }
 
-    .form-group input {
+    .input-group input {
         padding: 12px;
         font-size: 16px;
         -webkit-appearance: none;
@@ -1226,95 +1245,104 @@ body {
         appearance: none;
     }
 
-    .book-now-btn {
+    .submit-btn {
         padding: 14px 24px;
         font-size: 16px;
         width: 100%;
     }
 
-    .quality-section {
+    .features-section {
         padding: 40px 0;
     }
 
-    .quality-section h2 {
+    .features-section h2 {
         font-size: 22px;
     }
 
-    .quality-instruction {
+    .features-text {
         font-size: 12px;
         margin-bottom: 20px;
     }
 
-    .quality-grid {
+    .features-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
 
-    .quality-card {
+    .feature-card {
         padding: 20px 15px;
     }
 
-    .quality-icon {
+    .feature-icon {
         font-size: 36px;
     }
 
-    .quality-icon i {
+    .feature-icon i {
         font-size: 36px;
     }
 
-    .quality-card h3 {
+    .feature-card h3 {
         font-size: 17px;
     }
 
-    .quality-card p {
+    .feature-card p {
         font-size: 13px;
     }
 
-    .newsletter-section {
+    .subscribe-section {
         padding: 40px 0;
     }
 
-    .newsletter-text h2 {
+    .subscribe-text h2 {
         font-size: 22px;
         line-height: 1.3;
     }
 
-    .newsletter-form input {
+    .subscribe-form input {
         padding: 12px;
         font-size: 14px;
     }
 
-    .subscribe-btn {
+    .subscribe-button {
         padding: 12px 20px;
         font-size: 15px;
     }
 
-    .footer {
+    .footer-area {
         padding: 30px 0 20px;
     }
 
-    .footer-content {
+    .footer-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
 
-    .footer-section {
+    .footer-box {
         text-align: center;
     }
 
-    .footer-section h4 {
+    .footer-box h4 {
         font-size: 16px;
     }
 
-    .footer-section h5 {
+    .footer-box h5 {
         font-size: 14px;
     }
 
-    .social-icons {
+    .icons-box {
         justify-content: center;
     }
 
-    .hero-left h1 {
+    .copyright-box {
+        margin-top: 30px;
+        padding-top: 15px;
+    }
+
+    .copyright-text {
+        font-size: 13px;
+    }
+
+    .hero-text h1 {
         font-size: 20px;
     }
 
@@ -1322,32 +1350,32 @@ body {
         font-size: 20px;
     }
 
-    .stat-number {
+    .achievement-number {
         font-size: 20px;
     }
 
-    .services-section h2 {
+    .services-list-section h2 {
         font-size: 20px;
     }
 
-    .added-items-section h3 {
+    .items-box h3 {
         font-size: 20px;
     }
 
-    .quality-section h2 {
+    .features-section h2 {
         font-size: 20px;
     }
 
-    .newsletter-text h2 {
+    .subscribe-text h2 {
         font-size: 20px;
     }
 
-    .items-table {
+    .cart-table {
         font-size: 11px;
     }
 
-    .items-table th,
-    .items-table td {
+    .cart-table th,
+    .cart-table td {
         padding: 8px 4px;
         font-size: 11px;
     }
